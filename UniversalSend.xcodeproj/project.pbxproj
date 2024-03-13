@@ -11,6 +11,8 @@
 		B76AA5A72BA1FB34008AA34B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76AA5A62BA1FB34008AA34B /* ContentView.swift */; };
 		B76AA5A92BA1FB37008AA34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76AA5A82BA1FB37008AA34B /* Assets.xcassets */; };
 		B76AA5AC2BA1FB37008AA34B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76AA5AB2BA1FB37008AA34B /* Preview Assets.xcassets */; };
+		B76AA5B42BA1FB9C008AA34B /* SelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76AA5B32BA1FB9C008AA34B /* SelectionManager.swift */; };
+		B76AA5B82BA24248008AA34B /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = B76AA5B72BA24248008AA34B /* HotKey */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		B76AA5A82BA1FB37008AA34B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B76AA5AB2BA1FB37008AA34B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B76AA5AD2BA1FB37008AA34B /* UniversalSend.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UniversalSend.entitlements; sourceTree = "<group>"; };
+		B76AA5B32BA1FB9C008AA34B /* SelectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionManager.swift; sourceTree = "<group>"; };
+		B76AA5B52BA20400008AA34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76AA5B82BA24248008AA34B /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +57,9 @@
 		B76AA5A32BA1FB34008AA34B /* UniversalSend */ = {
 			isa = PBXGroup;
 			children = (
+				B76AA5B52BA20400008AA34B /* Info.plist */,
 				B76AA5A42BA1FB34008AA34B /* UniversalSendApp.swift */,
+				B76AA5B32BA1FB9C008AA34B /* SelectionManager.swift */,
 				B76AA5A62BA1FB34008AA34B /* ContentView.swift */,
 				B76AA5A82BA1FB37008AA34B /* Assets.xcassets */,
 				B76AA5AD2BA1FB37008AA34B /* UniversalSend.entitlements */,
@@ -85,6 +92,9 @@
 			dependencies = (
 			);
 			name = UniversalSend;
+			packageProductDependencies = (
+				B76AA5B72BA24248008AA34B /* HotKey */,
+			);
 			productName = UniversalSend;
 			productReference = B76AA5A12BA1FB34008AA34B /* UniversalSend.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +123,9 @@
 				Base,
 			);
 			mainGroup = B76AA5982BA1FB34008AA34B;
+			packageReferences = (
+				B76AA5B62BA24248008AA34B /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = B76AA5A22BA1FB34008AA34B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76AA5B42BA1FB9C008AA34B /* SelectionManager.swift in Sources */,
 				B76AA5A72BA1FB34008AA34B /* ContentView.swift in Sources */,
 				B76AA5A52BA1FB34008AA34B /* UniversalSendApp.swift in Sources */,
 			);
@@ -279,6 +293,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UniversalSend/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Need to use Apple Script.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +322,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UniversalSend/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Need to use Apple Script.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B76AA5B62BA24248008AA34B /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B76AA5B72BA24248008AA34B /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B76AA5B62BA24248008AA34B /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B76AA5992BA1FB34008AA34B /* Project object */;
 }
