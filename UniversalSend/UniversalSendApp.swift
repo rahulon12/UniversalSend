@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct UniversalSendApp: App {
     var body: some Scene {
-        WindowGroup {
+        MenuBarExtra("UniversalSend") {
             ContentView()
+                .frame(width: 200, height: 200)
         }
+        .menuBarExtraStyle(.window)
     }
 }
